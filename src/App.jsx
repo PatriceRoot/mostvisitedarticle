@@ -7,25 +7,18 @@ import ResultatGallery from './components/ResultatGallery.jsx';
 import NavBar from './components/NavBar.jsx';
 import ArticleCard from './components/ArticleCard.jsx';
 import ExportDropdownButton from './components/DropdownExport.jsx';
-import { Menu } from './components/Menu';
-import { datab } from '../data';
 function App() {
-    const titre = 'Pays';
-    const handleClick = () => {
-        alert('Button clicked!');
-    };
+    const handleClick = () => {};
     return (
-        <div>
-            <h2>Most visited wikimedia articles</h2>
+        <div id='results'>
+            <ExportDropdownButton htmlId='results' fileName='results' />
+            <NavBar />
             <ResultatGallery />
+            <ArticleCard />
             <SetDate />
-            <Menu data={datab} title={titre} />
             <MostArticleByProject project='fr.wikipedia' />
             <Button text='submit' event={handleClick}></Button>
             <WikiAfricaTopArticles />
-            <NavBar />
-            <ArticleCard />
-            <ExportDropdownButton />
             <Footer />
         </div>
     );
