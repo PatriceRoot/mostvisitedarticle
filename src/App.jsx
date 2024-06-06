@@ -11,9 +11,7 @@ import { Menu } from './components/Menu';
 import { datab } from '../data';
 function App() {
     const titre = 'Pays';
-    const handleClick = () => {
-        alert('Button clicked!');
-    };
+    const handleClick = () => {};
     return (
         <div>
             <h2>Most visited wikimedia articles</h2>
